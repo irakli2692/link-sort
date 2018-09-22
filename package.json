@@ -1,0 +1,31 @@
+{
+  "name": "link-sort",
+  "version": "1.0.0",
+  "description": "",
+  "main": "linkSort.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/irakli2692/link-sort.git"
+  },
+  "keywords": [
+    "sort",
+    "reverse"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/irakli2692/link-sort/issues"
+  },
+  "homepage": "https://github.com/irakli2692/link-sort#readme",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0",
+    "rewire": "^4.0.1"
+  }
+}
