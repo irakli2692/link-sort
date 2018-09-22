@@ -122,3 +122,5 @@ MinHeap.prototype.insert = function (item) {
   
   this.heapify(0);
 };
+
+module.exports = MinHeap;
