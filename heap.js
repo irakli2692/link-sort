@@ -4,16 +4,11 @@ function numberComparator(a, b) {
   return a < b ? -1 : 1;
 }
 
-function numberIncrease(number, increment) {
-  return number + increment;
-}
-
-function MinHeap(array, comparator, increase) {
+function MinHeap(array, comparator) {
   this.array = array;
   this.heapSize = array.length;
 
   this.comparator = comparator || numberComparator;
-  this.increase = increase || numberIncrease;
 
   this.buildHeap();
 }
@@ -114,10 +109,16 @@ MinHeap.prototype.extractMin = function() {
   this.heapify(0);
 };
 
-MinHeap.prototype.increaseWith = function(index, increment) {
-  if (index >= this.heapSize || index < 0) return;
-
-  this.array[index] = this.increase(this.array[index], increment);
-
-  this.heapify(index);
+MinHeap.prototype.insert = function (item) {
+  if (this.array.length === this.heapSize) {
+    this.array.push(item);
+  } else {
+    this.array[this.heapSize] = item;
+  }
+  
+  this.heapSize++;
+  
+  this.swap(0, this.heapSize - 1);
+  
+  this.heapify(0);
 };
